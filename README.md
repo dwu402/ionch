@@ -45,8 +45,18 @@ g also doesn't help, since it can encourage very `degenerate` solutions (in the 
 
 ## Fourth problem: Traditional methods also don't seem great
 
-naive_mle has been runnig for about 1.5 hours now and shows no sign of convergence.
+naive_mle has been runnig for about ~1.5~ 2 hours now and shows no sign of convergence.
 
 ## Fifth problem: pypei is not documented
 
 Not even going to try to say it's not _well_-documented. It's pretty opaque.
+
+On the other hand, there are other libraries that might be worth thinking about:
+
+- Collocinfer (R) is the OG generalised profiling method by Ramsay and Hooker.
+- all-at-once methods in the geophysics community probably are implemented somewhere and are mathematically identical to my approach. I can't find their code immediately, but Haber and Ascher (2001) might be a starting point.
+        
+- JAX is a nice autodiff library - though google does move fast with their projects, so there might be a different one by now
+- we use CasADi, which is written mainly for the optimal control field
+- autodiff is also an autodiff library
+- machine learning is heavy into ther autodifferentiation (and reverse-mode/adjoint methods), so they're bound to have other nice libraries out there
